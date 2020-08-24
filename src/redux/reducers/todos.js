@@ -10,10 +10,10 @@ export default function(state=[], action) {
       return state.filter(todo => todo.id !== id) 
     case "DONE_TODO":
       let indexForDone= state.findIndex(i => i.id === action.payload.id)
-      return state.map(todo => todo.id == action.payload.id ? {...todo, completed: !state[indexForDone].completed}: todo)
+      return state.map(todo => todo.id === action.payload.id ? {...todo, completed: !state[indexForDone].completed}: todo)
     case "PIN_TODO":
       let indexForPin = state.findIndex(i => i.id === action.payload.id)
-      return state.map(todo => todo.id == action.payload.id ? {...todo, pin: !state[indexForPin].pin}: todo)
+      return state.map(todo => todo.id === action.payload.id ? {...todo, pin: !state[indexForPin].pin}: todo)
     default:
       return state;
   }

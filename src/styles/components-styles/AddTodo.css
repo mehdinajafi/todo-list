@@ -1,0 +1,130 @@
+.addTodo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.addTodoForm {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 50vw;
+    margin: 2em 0;
+}
+
+.addTodoForm .inputTitleTodo {
+    font-family: 'Ubuntu', 'Cantarell', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px dashed black;
+    outline: none;
+    width: 70vw;
+    padding: 1em .2em;
+    margin-right: 1vw;
+    transition: border .5s;
+}
+
+.addTodoForm .btnAddTodo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: rgb(24, 144, 255);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(24, 144, 255);
+    border-radius: .2em;
+    outline: none;
+    transition: background .2s;
+}
+
+.addTodoForm .btnAddTodo:hover {
+    background-color: rgb(64, 169, 255);
+    border: 1px solid rgb(64, 169, 255);
+}
+
+.addTodoForm .btnAddTodo:active {
+    background-color: rgb(24, 144, 255);
+    border: 1px solid rgb(24, 144, 255);
+}
+
+.addTodoOptions {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 50vw;
+}
+
+/*------------------------ Start style DateTimePicker ------------------------*/
+
+.dateTimePicker {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.dateTimePickerIcon {
+    cursor: pointer;
+    border-radius: .5em;
+}
+
+.dateTimePickerIcon:hover {
+    background-color: rgba(64, 169, 255, 0.2);
+}
+
+.react-datetime-picker {
+    font-family: sans-serif;
+    outline: none;
+    border-radius: .2em;
+    margin-right: .2em;
+}
+
+.react-datetime-picker__wrapper {
+    border: 1px solid rgb(127, 140, 141);
+    border-radius: .2em;
+}
+
+.react-datetime-picker__clock {
+    display: none;
+}
+
+/*------------------------ End style DateTimePicker ------------------------*/
+
+
+
+
+/*------------------------ Start responsive AddTodo ------------------------*/
+
+@media only screen and (max-width: 1000px) {
+    .addTodoForm {
+        width: 70vw;
+    }
+
+    .addTodoOptions {
+        width: 70vw;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .addTodoForm {
+        width: 80vw;
+    }
+
+    .addTodoOptions {
+        width: 80vw;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .addTodoForm .inputTitleTodo {
+        font-size: 13px;
+    }
+}
+
+/*------------------------ End responsive AddTodo ------------------------*/

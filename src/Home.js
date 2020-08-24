@@ -1,11 +1,10 @@
 import React from "react";
-import fbase from "./firebase";
+import TodoList from "./components/TodoList";
 
 const Home = () => {
     return (
-        <section className="containers">
-            Home
-            <button onClick={() => fbase.auth().signOut()}>sign out</button>
+        <section className="container">
+            <TodoList/>
         </section>
     )
 }
