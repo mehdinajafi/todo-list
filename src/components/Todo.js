@@ -2,16 +2,16 @@ import React, { useContext } from "react";
 import { connect } from "react-redux";
 import { AuthContext } from "../Auth/AuthContext";
 import { doneTodo } from "../redux/actions";
-import { pinTodo } from "../redux/actions";
+import { importantTodo } from "../redux/actions";
 import { deleteTodo } from "../redux/actions";
 import fbase from "../firebase";
-import unPinIcon from "../assets/images/icons/unpin.svg";
-import pinIcon from "../assets/images/icons/pin.svg";
+import starIcon from "../assets/images/icons/star.svg";
+import importantIcon from "../assets/images/icons/important.svg";
 import trashIcon from "../assets/images/icons/trash.svg";
 import "../styles/components-styles/Todo.css";
 
-const Todo = ({ todo, deleteTodo, doneTodo, pinTodo }) => {
-  // Import AuthContext for currentUser's uid to update(completed,pin) each user's todo using its own token.
+const Todo = ({ todo, deleteTodo, doneTodo, importantTodo }) => {
+  // Import AuthContext for currentUser's uid to update(completed,important) each user's todo using its own token.
   const { currentUser } = useContext( AuthContext )
 
   const handleDoneTodo = (todo) => {
@@ -20,10 +20,10 @@ const Todo = ({ todo, deleteTodo, doneTodo, pinTodo }) => {
     doneTodo(todo.id)
   }
 
-  const handlePinTodo = (todo) => {
-    // Update todo.pin in redux's store and firebase database
-    fbase.database().ref(`/users/${currentUser.uid}/${todo.id}`).update({ pin: !todo.pin })
-    pinTodo(todo.id)
+  const handleImportantTodo = (todo) => {
+    // Update todo.important in redux's store and firebase database
+    fbase.database().ref(`/users/${currentUser.uid}/${todo.id}`).update({ important: !todo.important })
+    importantTodo(todo.id)
   }
 
   const handleDeleteTodo = (todo) => {
@@ -47,11 +47,11 @@ const Todo = ({ todo, deleteTodo, doneTodo, pinTodo }) => {
       </span>
 
       <div className="todo-options">
-        <div onClick={handlePinTodo.bind(this, todo)} className="pin-todo">
+        <div onClick={handleImportantTodo.bind(this, todo)} className="important-todo">
           {
-            todo.pin 
-            ? <img src={unPinIcon} alt="unpin"/>
-            : <img src={pinIcon} alt="pin"/>
+            todo.important 
+            ? <img src={importantIcon} alt="important"/>
+            : <img src={starIcon} alt="notImportant"/>
           }
         </div>
 
@@ -67,5 +67,5 @@ const Todo = ({ todo, deleteTodo, doneTodo, pinTodo }) => {
 // export default Todo;
 export default connect(
   null,
-  { deleteTodo, doneTodo, pinTodo }
+  { deleteTodo, doneTodo, importantTodo }
 )(Todo);

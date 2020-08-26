@@ -29,7 +29,7 @@ const TodoList = ({ todos, filter, setTodos }) => {
                 id: item, 
                 title: todoData[item].title,
                 completed: todoData[item].completed,
-                pin: todoData[item].pin,
+                important: todoData[item].important,
                 dateCreated: todoData[item].dateCreated,
                 reminder: todoData[item].reminder
             })
@@ -53,22 +53,6 @@ const TodoList = ({ todos, filter, setTodos }) => {
     <section className="add-and-show-todos">
 
       <AddTodo/>
-
-      { todos.filter(todo => todo.pin).length !== 0 ?
-        (
-          <div className="pinned-todos">
-            <h1 className="todos-title">Pinned</h1>
-            <ul className="todo-list">
-              {todos && todos.length
-                ? sortedTodos(todos, filter).filter(i => i.pin).map((todo, index) => {
-                    return <Todo key={`todo-${todo.id}`} todo={todo} />;
-                  })
-                : <img src={writeNewTodoIllustration} alt="No todos!" className="writeNewTodoIMG"/>}
-            </ul>
-          </div>
-        ) : null
-      }
-
       {
         pending 
           ? <div className="loadingDiv">
@@ -78,7 +62,7 @@ const TodoList = ({ todos, filter, setTodos }) => {
               <h1 className="todos-title">{filter}</h1>
               <ul className="todo-list">
                 {todos && todos.length
-                  ? sortedTodos(todos, filter).filter(todo => !todo.pin).map((todo) => {
+                  ? sortedTodos(todos, filter).map((todo) => {
                       return <Todo key={`todo-${todo.id}`} todo={todo} />;
                     })
                   : <img src={writeNewTodoIllustration} alt="No todos!" className="writeNewTodoIMG"/>}

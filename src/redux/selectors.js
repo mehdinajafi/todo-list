@@ -10,6 +10,8 @@ export const getTodosByFilters = (store, filter) => {
       return todos.filter(todo => todo.completed);
     case "Incomplete":
       return todos.filter(todo => !todo.completed);
+    case "Important":
+      return todos.filter(todo => todo.important);
     case "Inbox":
     default:
       return todos;

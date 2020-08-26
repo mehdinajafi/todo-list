@@ -8,7 +8,11 @@
     width: 50vw;
     margin-bottom: 1.5em;
     padding: 1em;
-    transition: background .4s;
+    transition: background 400ms ;
+    -webkit-transition: background 400ms ;
+    -moz-transition: background 400ms ;
+    -ms-transition: background 400ms ;
+    -o-transition: background 400ms ;
 }
 
 .todo-item:hover {
@@ -42,18 +46,19 @@
     width: 20%;
 }
 
-.pin-todo {
+.important-todo {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     cursor: pointer;
     border: 1px solid rgb(0, 103, 255);
     border-radius: 50%;
     padding: .3em;
 }
 
-.pin-todo:hover {
-    background-color: #0066ff3d;
+.important-todo:hover {
+    background-color: rgba(0, 103, 255, .2);
 }
 
 .delete-todo {
@@ -61,17 +66,13 @@
     flex-direction: column;
     align-items: center;
     cursor: pointer;
-    border: 1px solid #F44336;
+    border: 1px solid rgb(244, 67, 54);
     border-radius: 50%;
     padding: .3em;
 }
 
 .delete-todo:hover {
-    background-color: #ff19002f;
-}
-
-.delete-todo:active {
-    background-color: #e74d3c38;
+    background-color: rgba(244, 67, 54, .2);
 }
 
 
@@ -105,7 +106,7 @@
   	-moz-transition: all 0.3s ease-out;
   	-ms-transition: all 0.3s ease-out;
   	-o-transition: all 0.3s ease-out;
-    border: 2px solid #FFFFFF;
+    border: 2px solid rgb(255, 255, 255);
 }
 
 
@@ -116,7 +117,7 @@
     -ms-transform: rotate(0deg) scale(1);
     transform: rotate(0deg) scale(1);
     opacity:1;
-    border: 2px solid #FFFFFF;
+    border: 2px solid rgb(255, 255, 255);
 }
 
 
@@ -128,7 +129,7 @@
     height: 0px;
     width: 0px;
     border-radius: 5px;
-    border: solid #009BFF;
+    border: solid rgb(0, 155, 255);
     border-width: 0 3px 3px 0;
     -webkit-transform: rotate(0deg) scale(0);
     -ms-transform: rotate(0deg) scale(0);
@@ -151,7 +152,7 @@
   top: 3px;
   width: 6px;
   height: 12px;
-  border: solid #009BFF;
+  border: solid rgb(0, 155, 255);
   border-width: 0 2px 2px 0;
   background-color: transparent;
   border-radius: 0;
@@ -201,7 +202,7 @@
         width: 26%;
     }
 
-    .pin-todo-icon {
+    .star-todo-icon {
         width: 30px;
         height: 30px;
     }
@@ -236,7 +237,7 @@
         font-size: 15px;
     }
 
-    .pin-todo-icon {
+    .star-todo-icon {
         width: 25px;
         height: 25px;
     }

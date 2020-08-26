@@ -18,8 +18,8 @@ export const doneTodo = id => ({
   payload: { id }
 })
 
-export const pinTodo = id => ({
-  type: "PIN_TODO",
+export const importantTodo = id => ({
+  type: "IMPORTANT_TODO",
   payload: { id }
 })
      

@@ -34,7 +34,7 @@ const AddTodo = ({ addTodo }) => {
         id: uuidv4(),
         title: inputTitleTodo.value,
         completed: false,
-        pin: false,
+        important: false,
         dateCreated: moment().valueOf(),
         reminder: !reminder ? null : moment(reminder).valueOf()
       }

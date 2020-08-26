@@ -20,7 +20,11 @@
     margin: .5em 0;
     padding: .5em;
     border-radius: .5em;
-    transition: background .5s;
+    transition: background 500ms ;
+    -webkit-transition: background 500ms ;
+    -moz-transition: background 500ms ;
+    -ms-transition: background 500ms ;
+    -o-transition: background 500ms ;
 }
 
 .sidebar-filters .sidebar-filter-li span {
@@ -91,8 +95,8 @@
         justify-content: center;
         align-items: center;
         position: fixed;
-        bottom: 5%;
-        left: 5%;
+        bottom: 12%;
+        left: 7.5%;
         background-color: #F4F4F4;
         border: 1px solid #1B2E35;
         border-radius: 5px;
