@@ -1,4 +1,4 @@
-const filter = (state = "all", action) => {
+const filter = (state = "Inbox", action) => {
   switch (action.type) {
     case "SET_FILTER": {
       return action.payload.filter;

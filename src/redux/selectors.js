@@ -4,11 +4,13 @@ export const getTodosByFilters = (store, filter) => {
   const todos = getTodosState(store);
 
   switch (filter) {
-    case "completed":
+    case "Today":
+      return todos.filter(todo => new Date(todo.reminder).getDay() === new Date().getDay());
+    case "Completed":
       return todos.filter(todo => todo.completed);
-    case "incomplete":
+    case "Incomplete":
       return todos.filter(todo => !todo.completed);
-    case "all":
+    case "Inbox":
     default:
       return todos;
   }

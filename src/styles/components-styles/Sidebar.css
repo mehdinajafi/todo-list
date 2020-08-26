@@ -1,0 +1,148 @@
+.sidebar-content {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(0, 103, 255);
+    height: 100vh;
+    padding: 0 1em;
+}
+
+.sidebar-filters .sidebar-filter-li {
+    background-color: rgb(244, 244, 244);
+    color: #1B2E35;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    margin: .5em 0;
+    padding: .5em;
+    border-radius: .5em;
+    transition: background .5s;
+}
+
+.sidebar-filters .sidebar-filter-li span {
+    margin-left: .2em;
+}
+
+/* Each time click on active li, these two styles are activated */
+.sidebar-filters .active{
+    color: rgb(21, 85, 224);
+    -webkit-transition: color 400ms;
+    -moz-transition: color 400ms;
+    -o-transition: color 400ms;
+    transition: color 400ms;
+}
+
+.sidebar-filters .active svg{
+    -webkit-transition: color 400ms;
+    -moz-transition: color 400ms;
+    -o-transition: color 400ms;
+    transition: color 400ms;
+}
+
+/* account-manager style */
+.account-manager {
+    background-color: rgb(244, 244, 244);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 10vh;
+    margin-bottom: .5em;
+    border-radius: .5em;
+}
+
+.account-manager .signout-btn {
+    color: rgb(0, 103, 255);
+    background-color: transparent;
+    border: none;
+    border-radius: .5em;
+    padding: .5em;
+    cursor: pointer;
+}
+
+.account-manager .signout-btn:hover {
+    background-color: rgba(0, 103, 255, .2);
+}
+
+/* Hide the button when the screen is large */
+.hamburger-btn-label {
+    display: none;
+}
+
+@media screen and (max-width: 900px) {
+
+    .sidebar-content {
+        position: fixed;
+        left: -100%;
+        -webkit-transition: left 400ms;
+        -moz-transition: left 400ms;
+        -o-transition: left 400ms;
+        transition: left 400ms;
+    }
+
+    /* Start hamburger menue style  */
+    .hamburger-btn-label {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        bottom: 5%;
+        left: 5%;
+        background-color: #F4F4F4;
+        border: 1px solid #1B2E35;
+        border-radius: 5px;
+        padding: 5px;
+        cursor: pointer;
+        z-index: 200;
+    }
+
+    .hamburger-btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 2em;
+        height: 2em;
+        margin-right: 5px;
+        -webkit-transition: all 500ms;
+        -moz-transition: all 500ms;
+        -o-transition: all 500ms;
+        transition: all 500ms;
+    }
+
+    .hamburger-btn-line {
+        background-color: #1B2E35;
+        width: 100%;
+        height: 4px;
+        transform-origin: right;
+        -webkit-transition: all 600ms;
+        -moz-transition: all 600ms;
+        -o-transition: all 600ms;
+        transition: all 600ms;
+    }
+
+    /* When hamburger-btn's checkbox is checked do: */
+    #hamburger-btn-checkbox:checked ~ .sidebar-content {
+        left: 0;
+    }
+
+    #hamburger-btn-checkbox:checked ~ .hamburger-btn-label .hamburger-btn {
+        transform: rotateZ(90deg);
+    }
+
+    #hamburger-btn-checkbox:checked ~ .hamburger-btn-label .hamburger-btn .hamburger-btn-line-1 {
+        transform: rotateZ(-40deg);
+    }
+
+    #hamburger-btn-checkbox:checked ~ .hamburger-btn-label .hamburger-btn .hamburger-btn-line-2 {
+        opacity: 0;
+    }
+
+    #hamburger-btn-checkbox:checked ~ .hamburger-btn-label .hamburger-btn .hamburger-btn-line-3 {
+        transform: rotateZ(40deg);
+    }
+}
