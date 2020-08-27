@@ -5,7 +5,7 @@ export const getTodosByFilters = (store, filter) => {
 
   switch (filter) {
     case "Today":
-      return todos.filter(todo => new Date(todo.reminder).getDay() === new Date().getDay());
+      return todos.filter(todo => todo.reminder ? new Date(todo.reminder).getDay() === new Date().getDay():null);
     case "Completed":
       return todos.filter(todo => todo.completed);
     case "Incomplete":
