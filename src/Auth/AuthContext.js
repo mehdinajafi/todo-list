@@ -1,30 +1,30 @@
-import React, { useEffect, useState } from "react";
-import fbase from "../firebase.js";
+import React, { useEffect, useState } from 'react'
+import fbase from '../firebase.js'
 
-export const AuthContext = React.createContext();
+export const AuthContext = React.createContext()
 
 export const AuthProvider = ({ children }) => {
-  const [currentUser, setCurrentUser] = useState(null);
-  const [pending, setPending] = useState(true);
+  const [currentUser, setCurrentUser] = useState(null)
+  const [pending, setPending] = useState(true)
 
   useEffect(() => {
     fbase.auth().onAuthStateChanged((user) => {
       setCurrentUser(user)
       setPending(false)
-    });
-  }, []);
+    })
+  }, [])
 
-  if(pending){
+  if (pending) {
     return <>Loading...</>
   }
 
   return (
     <AuthContext.Provider
       value={{
-        currentUser
+        currentUser,
       }}
     >
       {children}
     </AuthContext.Provider>
-  );
-};
+  )
+}

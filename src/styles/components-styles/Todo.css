@@ -1,153 +1,149 @@
 .todo-item {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: wrap;
-    box-shadow: 1px 1px 6px rgb(189, 195, 199);
-    border-radius: 1em;
-    width: 50vw;
-    margin-bottom: 1.5em;
-    padding: 1em;
-    transition: background 400ms ;
-    -webkit-transition: background 400ms ;
-    -moz-transition: background 400ms ;
-    -ms-transition: background 400ms ;
-    -o-transition: background 400ms ;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  box-shadow: 1px 1px 6px rgb(189, 195, 199);
+  border-radius: 1em;
+  width: 50vw;
+  margin-bottom: 1.5em;
+  padding: 1em;
+  transition: background 400ms;
+  -webkit-transition: background 400ms;
+  -moz-transition: background 400ms;
+  -ms-transition: background 400ms;
+  -o-transition: background 400ms;
 }
 
 .todo-item:hover {
-    background-color: rgba(189, 195, 199, .3);
+  background-color: rgba(189, 195, 199, 0.3);
 }
 
 .todo-checkbox {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 3em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 3em;
 }
 
 .todo-title {
-    font-size: 18px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 70%;
+  font-size: 18px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 70%;
 }
 
 .todo-completed {
-    text-decoration: line-through;
+  text-decoration: line-through;
 }
 
 .todo-options {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 20%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 20%;
 }
 
 .important-todo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    border: 1px solid rgb(0, 103, 255);
-    border-radius: 50%;
-    padding: .3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 1px solid rgb(0, 103, 255);
+  border-radius: 50%;
+  padding: 0.3em;
 }
 
 .important-todo:hover {
-    background-color: rgba(0, 103, 255, .2);
+  background-color: rgba(0, 103, 255, 0.2);
 }
 
 .delete-todo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    cursor: pointer;
-    border: 1px solid rgb(244, 67, 54);
-    border-radius: 50%;
-    padding: .3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid rgb(244, 67, 54);
+  border-radius: 50%;
+  padding: 0.3em;
 }
 
 .delete-todo:hover {
-    background-color: rgba(244, 67, 54, .2);
+  background-color: rgba(244, 67, 54, 0.2);
 }
-
 
 /*------------------------ Start checkbox style ------------------------*/
 .checkbox-label {
-    position: relative;
-    cursor: pointer;
-    font-size: 22px;
-    line-height: 24px;
-    height: 24px;
-    width: 24px;
-    clear: both;
+  position: relative;
+  cursor: pointer;
+  font-size: 22px;
+  line-height: 24px;
+  height: 24px;
+  width: 24px;
+  clear: both;
 }
 
 .checkbox-label input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
 }
 
 .checkbox-label .checkbox-custom {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    height: 24px;
-    width: 24px;
-    background-color: transparent;
-    border-radius: 5px;
-  	transition: all 0.3s ease-out;
-  	-webkit-transition: all 0.3s ease-out;
-  	-moz-transition: all 0.3s ease-out;
-  	-ms-transition: all 0.3s ease-out;
-  	-o-transition: all 0.3s ease-out;
-    border: 2px solid rgb(255, 255, 255);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 24px;
+  width: 24px;
+  background-color: transparent;
+  border-radius: 5px;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  border: 2px solid rgb(255, 255, 255);
 }
-
 
 .checkbox-label input:checked ~ .checkbox-custom {
-    background-color: transparent;
-    border-radius: 5px;
-    -webkit-transform: rotate(0deg) scale(1);
-    -ms-transform: rotate(0deg) scale(1);
-    transform: rotate(0deg) scale(1);
-    opacity:1;
-    border: 2px solid rgb(255, 255, 255);
+  background-color: transparent;
+  border-radius: 5px;
+  -webkit-transform: rotate(0deg) scale(1);
+  -ms-transform: rotate(0deg) scale(1);
+  transform: rotate(0deg) scale(1);
+  opacity: 1;
+  border: 2px solid rgb(255, 255, 255);
 }
-
 
 .checkbox-label .checkbox-custom::after {
-    position: absolute;
-    content: "";
-    left: 12px;
-    top: 12px;
-    height: 0px;
-    width: 0px;
-    border-radius: 5px;
-    border: solid rgb(0, 155, 255);
-    border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(0deg) scale(0);
-    -ms-transform: rotate(0deg) scale(0);
-    transform: rotate(0deg) scale(0);
-    opacity:1;
-  	transition: all 0.1s ease-out;
-  	-webkit-transition: all 0.1s ease-out;
-  	-moz-transition: all 0.1s ease-out;
-  	-ms-transition: all 0.1s ease-out;
-  	-o-transition: all 0.1s ease-out;
+  position: absolute;
+  content: '';
+  left: 12px;
+  top: 12px;
+  height: 0px;
+  width: 0px;
+  border-radius: 5px;
+  border: solid rgb(0, 155, 255);
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(0deg) scale(0);
+  -ms-transform: rotate(0deg) scale(0);
+  transform: rotate(0deg) scale(0);
+  opacity: 1;
+  transition: all 0.1s ease-out;
+  -webkit-transition: all 0.1s ease-out;
+  -moz-transition: all 0.1s ease-out;
+  -ms-transition: all 0.1s ease-out;
+  -o-transition: all 0.1s ease-out;
 }
-
 
 .checkbox-label input:checked ~ .checkbox-custom::after {
   -webkit-transform: rotate(45deg) scale(1);
   -ms-transform: rotate(45deg) scale(1);
   transform: rotate(45deg) scale(1);
-  opacity:1;
+  opacity: 1;
   left: 8px;
   top: 3px;
   width: 6px;
@@ -160,102 +156,96 @@
 
 /* Style for Circular Checkbox */
 .checkbox-label .checkbox-custom.circular {
-    border-radius: 50%;
-    border: 2px solid rgb(0, 103, 255);
+  border-radius: 50%;
+  border: 2px solid rgb(0, 103, 255);
 }
 
 .checkbox-label input:checked ~ .checkbox-custom.circular {
-    background-color: rgb(0, 103, 255);
-    border-radius: 50%;
-    border: 2px solid rgb(0, 103, 255);
+  background-color: rgb(0, 103, 255);
+  border-radius: 50%;
+  border: 2px solid rgb(0, 103, 255);
 }
 .checkbox-label input:checked ~ .checkbox-custom.circular::after {
-    border: solid #FFFFFF;
-    border-width: 0 2px 2px 0;
+  border: solid #ffffff;
+  border-width: 0 2px 2px 0;
 }
 .checkbox-label .checkbox-custom.circular::after {
-    border-radius: 50%;
+  border-radius: 50%;
 }
 
 /*------------------------ End checkbox style ------------------------*/
 
-
-
-
 /*------------------------ Start responsive Todo ------------------------*/
 
 @media only screen and (max-width: 1000px) {
-    .todo-item {
-        width: 70vw;
-    }
+  .todo-item {
+    width: 70vw;
+  }
 }
 
 @media only screen and (max-width: 700px) {
-    .todo-item {
-        width: 80vw;
-    }
+  .todo-item {
+    width: 80vw;
+  }
 }
 
 @media only screen and (max-width: 600px) {
+  .todo-options {
+    width: 26%;
+  }
 
-    .todo-options {
-        width: 26%;
-    }
+  .star-todo-icon {
+    width: 30px;
+    height: 30px;
+  }
 
-    .star-todo-icon {
-        width: 30px;
-        height: 30px;
-    }
+  .delete-todo-icon {
+    width: 30px;
+    height: 30px;
+  }
 
-    .delete-todo-icon {
-        width: 30px;
-        height: 30px;
-    }
+  .todo-checkbox {
+    width: 2em;
+  }
 
-    .todo-checkbox {
-        width: 2em;
-    }
-
-    .todo-title {
-        width: 50vw;
-    }
-
+  .todo-title {
+    width: 50vw;
+  }
 }
 
 @media only screen and (max-width: 500px) {
+  .todo-item {
+    padding: 0.9em;
+    margin-bottom: 0.8em;
+  }
 
-    .todo-item {
-        padding: .9em;
-        margin-bottom: .8em;
-    }
+  .todo-options {
+    width: 27%;
+  }
 
-    .todo-options {
-        width: 27%;
-    }
+  .todo-title {
+    font-size: 15px;
+  }
 
-    .todo-title {
-        font-size: 15px;
-    }
+  .star-todo-icon {
+    width: 25px;
+    height: 25px;
+  }
 
-    .star-todo-icon {
-        width: 25px;
-        height: 25px;
-    }
-
-    .delete-todo-icon {
-        width: 25px;
-        height: 25px;
-    }
+  .delete-todo-icon {
+    width: 25px;
+    height: 25px;
+  }
 }
 
 @media only screen and (max-width: 380px) {
-    .todo-item {
-        width: 90vw;
-    }
+  .todo-item {
+    width: 90vw;
+  }
 
-    .todo-options {
-        width: 23%;
-    }
+  .todo-options {
+    width: 23%;
+  }
 }
 
 /*------------------------ End responsive Todo ------------------------*/

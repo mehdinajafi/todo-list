@@ -1,57 +1,56 @@
 .loadingDiv {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .loadingGif {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .add-and-show-todos {
-    margin: 0 auto;
-    width: 95vw;
+  margin: 0 auto;
+  width: 95vw;
 }
 
 .todos-title {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-    color: #0067FF;
-    height: 4em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: #0067ff;
+  height: 4em;
 }
 
 .todo-list {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .writeNewTodoIMG {
-    width: 40vw;
+  width: 40vw;
 }
-
 
 /*------------------------ Start responsive TodoList ------------------------*/
 
 @media only screen and (max-width: 900px) {
-    .writeNewTodoIMG {
-        width: 100vw;
-    }
+  .writeNewTodoIMG {
+    width: 100vw;
+  }
 }
 
 @media only screen and (max-width: 300px) {
-    .todos-title {
-        font-size: 25px;
-    }
+  .todos-title {
+    font-size: 25px;
+  }
 }
 
 /*------------------------ End responsive TodoList ------------------------*/

@@ -1,17 +1,17 @@
 li {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 .container {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 }
 
 .sidebar {
-    z-index: 100;
+  z-index: 100;
 }
 
 .add-and-show-todos {
-    width: 100vw;
+  width: 100vw;
 }
