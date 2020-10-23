@@ -3,14 +3,12 @@ import 'firebase/auth'
 import 'firebase/database'
 
 const fbase = firebase.initializeApp({
-  apiKey: 'AIzaSyDs2aYAYUaEPumG5YdShtvi9LUU3RTPKSc',
-  authDomain: 'to-do-list-test-153fd.firebaseapp.com',
-  databaseURL: 'https://to-do-list-test-153fd.firebaseio.com',
-  projectId: 'to-do-list-test-153fd',
-  storageBucket: 'to-do-list-test-153fd.appspot.com',
-  messagingSenderId: '423011375754',
-  appId: '1:423011375754:web:3b1cca83bfe602cc3feb73',
-  measurementId: 'G-6BRG6CM9KG',
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  databaseURL: process.env.REACT_APP_FIREBASE_DATABASE_URL,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
 })
 
 export default fbase
