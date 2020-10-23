@@ -1,15 +1,24 @@
-<p align="center">
-    <img src="demo.gif"/>
-</p>
+![demo](./demo.gif)
 
 ## Todo list
+
 Run the following command:
 
 ```sh
 $ cd todo-list
 ```
 
-Then change firebase file in ` src` folder.
+Then in root of the project, create your .env file and fill in the following sections:
+
+```
+REACT_APP_FIREBASE_API_KEY=
+REACT_APP_FIREBASE_AUTH_DOMAIN=
+REACT_APP_FIREBASE_DATABASE_URL=
+REACT_APP_FIREBASE_PROJECT_ID=
+REACT_APP_FIREBASE_STORAGE_BUCKET=
+REACT_APP_FIREBASE_MESSAGING_SENDER_ID=
+```
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -33,4 +42,5 @@ Your app is ready to be deployed!
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 ## Todos
-[ ] Ability to select categories
+
+- [ ] Ability to select categories
