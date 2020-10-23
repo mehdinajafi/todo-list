@@ -152,10 +152,10 @@ const Sidebar = ({ setFilter }) => {
           </li>
         </ul>
         <div className="account-manager">
-          <span>{currentUser.email}</span>
+          <span className="account-manager-email">{currentUser.email}</span>
           <button
             onClick={() => fbase.auth().signOut()}
-            className="signout-btn"
+            className="account-manager-signout-btn"
           >
             Sign out
           </button>

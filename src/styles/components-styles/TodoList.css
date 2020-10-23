@@ -13,11 +13,6 @@
   align-items: center;
 }
 
-.add-and-show-todos {
-  margin: 0 auto;
-  width: 95vw;
-}
-
 .todos-title {
   display: flex;
   flex-direction: row;
